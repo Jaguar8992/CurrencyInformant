@@ -1,0 +1,11 @@
+server.port: 8080
+base: RUB
+changerates:
+  api.id: ff837a07a99c42f9b7f783b83df9e0df
+  general.url: https://openexchangerates.org/api/
+giphy:
+  general.url: https://api.giphy.com/v1/gifs/random
+  api.id: nUvOIITu7hdlgnEf0wNQKrWyce35XaEQ
+  tag:
+    rich: rich
+    broke: broke
