@@ -4,7 +4,9 @@ import main.client.FeignCurrencyClient;
 import main.model.RateOfExchange;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -33,8 +35,8 @@ public class CurrencyService {
      * Получение списка валют
      */
 
-    public Set<String> getCodeList (){
-        return currencyClient.getCurrent(apiKey).getRates().keySet();
+    public ResponseEntity<?> getCodeList (){
+        return ResponseEntity.ok(currencyClient.getCurrent(apiKey).getRates().keySet());
     }
 
     /**
@@ -42,15 +44,18 @@ public class CurrencyService {
      * @param currencyCode Код валюты выбранный пользователем
      */
 
-    public String getResponse (String currencyCode){
+    public ResponseEntity<?> getTagKey(String currencyCode){
 
         RateOfExchange current = currencyClient.getCurrent(apiKey);
-        Double currentRate = getTheCurrentRateInBaseCurrency(base, currencyCode, current);
-        Double prevRate = getPrevRate(current.getTimestamp() * 1000, currentRate, currencyCode);
-
-        int tagKey = currentRate.compareTo(prevRate);
-
-        return giphyService.getGif(tagKey);
+        Double currentRate;
+        Double prevRate;
+        try {
+            currentRate = getTheCurrentRateInBaseCurrency(base, currencyCode, current);
+            prevRate = getPrevRate(current.getTimestamp() * 1000, currentRate, currencyCode);
+        } catch (NullPointerException ex){
+            return ResponseEntity.badRequest().body(ex);
+        }
+        return ResponseEntity.ok(currentRate.compareTo(prevRate));
     }
 
     /**
@@ -58,7 +63,7 @@ public class CurrencyService {
      * Метод учитывает, что в выходные и праздничные дни курсы валют не обновляются
      */
 
-    private double getPrevRate (long timestamp, double currantRate, String currencyCode){
+    private Double getPrevRate (long timestamp, double currantRate, String currencyCode) throws NullPointerException{
         Date date = new Date(timestamp);
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
@@ -66,7 +71,7 @@ public class CurrencyService {
         String prevDate = format.format(calendar.getTime());
 
         RateOfExchange prev = currencyClient.getHistorical(prevDate, apiKey);
-        double prevRate = getTheCurrentRateInBaseCurrency(base, currencyCode, prev);
+        Double prevRate = getTheCurrentRateInBaseCurrency(base, currencyCode, prev);
 
         if (prevRate == currantRate){
             return getPrevRate(calendar.getTime().getTime(), currantRate, currencyCode);
@@ -81,10 +86,10 @@ public class CurrencyService {
      * @param rate Объект содержащий ответ полученный с сайта https://openexchangerates.org/
      */
 
-    private double getTheCurrentRateInBaseCurrency (String base, String currencyCode, RateOfExchange rate){
-        double baseRate = rate.getRates().get(base);
-        double rateByCode = rate.getRates().get(currencyCode);
+    private Double getTheCurrentRateInBaseCurrency (String base, String currencyCode, RateOfExchange rate) throws NullPointerException{
+        Double baseRate = rate.getRates().get(base);
+        Double rateByCode = rate.getRates().get(currencyCode);
 
-        return rateByCode / baseRate;
+        return baseRate / rateByCode;
     }
 }

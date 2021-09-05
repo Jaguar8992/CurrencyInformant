@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="main.ServicesTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-09-05T19:46:25" hostname="LAPTOP-2OVV8HOA" time="0.059">
+  <properties/>
+  <testcase name="previousIsGreater" classname="main.ServicesTest" time="0.027"/>
+  <testcase name="previousIsNull" classname="main.ServicesTest" time="0.005"/>
+  <testcase name="getList" classname="main.ServicesTest" time="0.008"/>
+  <testcase name="rich" classname="main.ServicesTest" time="0.005"/>
+  <testcase name="broke" classname="main.ServicesTest" time="0.004"/>
+  <testcase name="compare" classname="main.ServicesTest" time="0.004"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.4)
+
+2021-09-05 22:46:24.863  INFO 20964 --- [    Test worker] main.ServicesTest                        : Starting ServicesTest using Java 15.0.1 on LAPTOP-2OVV8HOA with PID 20964 (started by Bruiser in C:\skillbox\ExampleForGithub\CurrencyInformant)
+2021-09-05 22:46:24.863  INFO 20964 --- [    Test worker] main.ServicesTest                        : No active profile set, falling back to default profiles: default
+2021-09-05 22:46:25.087  INFO 20964 --- [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ae3db0b7-d2fc-3cf7-8929-728353e9ce43
+2021-09-05 22:46:25.459  INFO 20964 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-09-05 22:46:25.735  INFO 20964 --- [    Test worker] main.ServicesTest                        : Started ServicesTest in 0.97 seconds (JVM running for 8.903)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

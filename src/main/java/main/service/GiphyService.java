@@ -1,8 +1,10 @@
 package main.service;
 
+import feign.FeignException;
 import main.client.FeignGiphyClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -25,8 +27,9 @@ public class GiphyService {
      * Получает gif, ее тип зависит от того вырос курс ли валюты за последний день или же упал
      * @return Возвращает ответ с сервиса https://giphy.com/, а также тэг
      */
-    public String getGif (int tagKey) {
+    public ResponseEntity<?> getGif (int tagKey) {
         String tag;
+        String gifData;
 
         if (tagKey > 0){
             tag = rich;
@@ -34,11 +37,15 @@ public class GiphyService {
             tag = broke;
         }
 
-        String gifData = giphyClient.getGif(apiKey, tag);
+        try {
+            gifData = giphyClient.getGif(apiKey, tag);
+        }  catch (FeignException ex){
+            return ResponseEntity.badRequest().body(ex);
+        }
         int index = gifData.lastIndexOf("}");
         /**
          * Добавляем ссылку на тэг по которому был найден gif
         * */
-        return gifData.substring(0, index) + ",\"tag\":\"" + tag + "\"}";
+        return ResponseEntity.ok(gifData.substring(0, index) + ",\"tag\":\"" + tag + "\"}");
     }
 }

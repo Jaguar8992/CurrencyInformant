@@ -1,6 +1,7 @@
 package main.controller;
 
 import main.service.CurrencyService;
+import main.service.GiphyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,11 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DefaultController {
 
-    private final CurrencyService service;
+    private final CurrencyService currencyService;
+    private final GiphyService giphyService;
 
     @Autowired
-    public DefaultController(CurrencyService service) {
-        this.service = service;
+    public DefaultController(CurrencyService service, GiphyService giphyService) {
+        this.currencyService = service;
+        this.giphyService = giphyService;
     }
 
     /**
@@ -23,7 +26,7 @@ public class DefaultController {
      */
     @GetMapping("/currencies")
     public ResponseEntity <?> getCurrencies (){
-        return ResponseEntity.ok(service.getCodeList());
+        return currencyService.getCodeList();
     }
 
     /**
@@ -32,7 +35,13 @@ public class DefaultController {
      * @return
      */
     @GetMapping("/gif")
-    public ResponseEntity<String> getGif (@RequestParam String code){
-        return ResponseEntity.ok(service.getResponse(code));
+    public ResponseEntity<?> getGif (@RequestParam String code){
+
+        ResponseEntity <?> response = currencyService.getTagKey(code);
+        if (response.getStatusCodeValue() == 200){
+            return giphyService.getGif((int) response.getBody());
+        }
+
+        return ResponseEntity.badRequest().body(null);
     }
 }
