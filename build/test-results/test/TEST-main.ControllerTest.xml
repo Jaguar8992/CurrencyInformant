@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Testing controller" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-09-06T06:37:09" hostname="LAPTOP-2OVV8HOA" time="6.011">
+  <properties/>
+  <testcase name="Controller @NotNull" classname="main.ControllerTest" time="0.896"/>
+  <testcase name="Get gif" classname="main.ControllerTest" time="4.637"/>
+  <testcase name="Controller @NotNull" classname="main.ControllerTest" time="0.004"/>
+  <testcase name="Get code list" classname="main.ControllerTest" time="0.274"/>
+  <testcase name="Get exception" classname="main.ControllerTest" time="0.192"/>
+  <system-out><![CDATA[09:37:05.724 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+09:37:05.724 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+09:37:05.726 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [main.ControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+09:37:05.729 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [main.ControllerTest], using SpringBootContextLoader
+09:37:05.731 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [main.ControllerTest]: class path resource [main/ControllerTest-context.xml] does not exist
+09:37:05.732 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [main.ControllerTest]: class path resource [main/ControllerTestContext.groovy] does not exist
+09:37:05.733 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [main.ControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:37:05.733 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [main.ControllerTest]: ControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:37:05.750 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [main.ControllerTest]
+09:37:05.751 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration main.Main for test class main.ControllerTest
+09:37:05.754 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [main.ControllerTest]: using defaults.
+09:37:05.754 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+09:37:05.755 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+09:37:05.756 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+09:37:05.756 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@35d8748f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@75d7aebe, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@75e71a74, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4ef0715a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@387a1807, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7090e3e8, org.springframework.test.context.event.EventPublishingTestExecutionListener@3de96334, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@70debf72, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@188c2b4e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6ff41414, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@19722a1d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1cd2236e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@65fdbde1]
+09:37:05.763 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@5dd5eb24 testClass = ControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@39908b15 testClass = ControllerTest, locations = '{}', classes = '{class main.Main}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@61ff3d88, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@80a97bb, [ImportsContextCustomizer@548c37b9 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@27a22aa7, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6b54aa1d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@61b02de7, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@67632b40], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+09:37:05.813 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.4)
+
+2021-09-06 09:37:06.494  INFO 3048 --- [    Test worker] main.ControllerTest                      : Starting ControllerTest using Java 15.0.1 on LAPTOP-2OVV8HOA with PID 3048 (started by Bruiser in C:\skillbox\ExampleForGithub\CurrencyInformant)
+2021-09-06 09:37:06.497  INFO 3048 --- [    Test worker] main.ControllerTest                      : No active profile set, falling back to default profiles: default
+2021-09-06 09:37:07.802  INFO 3048 --- [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=539801be-53d8-33d6-b207-9ac93b90acd6
+2021-09-06 09:37:09.058  INFO 3048 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-09-06 09:37:09.435  INFO 3048 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-09-06 09:37:09.436  INFO 3048 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-09-06 09:37:09.437  INFO 3048 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-09-06 09:37:09.730  INFO 3048 --- [    Test worker] main.ControllerTest                      : Started ControllerTest in 3.891 seconds (JVM running for 5.991)
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /gif
+       Parameters = {code=[USD]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = main.controller.DefaultController
+           Method = main.controller.DefaultController#getGif(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"8774"]
+     Content type = text/plain;charset=UTF-8
+             Body = {"data":{"type":"gif","id":"BfrOzZpsjfuiQ","url":"https:\/\/giphy.com\/gifs\/jimmy-fallon-hillary-clinton-donald-trump-BfrOzZpsjfuiQ","slug":"jimmy-fallon-hillary-clinton-donald-trump-BfrOzZpsjfuiQ","bitly_gif_url":"http:\/\/gph.is\/1NloFFW","bitly_url":"http:\/\/gph.is\/1NloFFW","embed_url":"https:\/\/giphy.com\/embed\/BfrOzZpsjfuiQ","username":"","source":"http:\/\/usatodayopinion.tumblr.com\/post\/121775524748\/check-out-what-jimmy-fallon-and-the-rest-of-the","title":"Donald Trump GIF","rating":"g","content_url":"","source_tld":"usatodayopinion.tumblr.com","source_post_url":"http:\/\/usatodayopinion.tumblr.com\/post\/121775524748\/check-out-what-jimmy-fallon-and-the-rest-of-the","is_sticker":0,"import_datetime":"2015-06-27 02:48:36","trending_datetime":"2016-03-02 15:24:34","images":{"downsized_large":{"height":"146","size":"367815","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=giphy.gif&ct=g","width":"260"},"fixed_height_small_still":{"height":"100","size":"11024","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/100_s.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=100_s.gif&ct=g","width":"178"},"original":{"frames":"19","hash":"3c1220823dcafee7a53193ad5142aca7","height":"146","mp4":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy.mp4?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=giphy.mp4&ct=g","mp4_size":"203309","size":"367815","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=giphy.gif&ct=g","webp":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy.webp?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=giphy.webp&ct=g","webp_size":"167930","width":"260"},"fixed_height_downsampled":{"height":"200","size":"203196","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/200_d.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=200_d.gif&ct=g","webp":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/200_d.webp?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=200_d.webp&ct=g","webp_size":"129144","width":"356"},"downsized_still":{"height":"146","size":"367815","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy_s.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=giphy_s.gif&ct=g","width":"260"},"fixed_height_still":{"height":"200","size":"31806","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/200_s.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=200_s.gif&ct=g","width":"356"},"downsized_medium":{"height":"146","size":"367815","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=giphy.gif&ct=g","width":"260"},"downsized":{"height":"146","size":"367815","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=giphy.gif&ct=g","width":"260"},"preview_webp":{"height":"74","size":"38978","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy-preview.webp?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=giphy-preview.webp&ct=g","width":"132"},"original_mp4":{"height":"268","mp4":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy.mp4?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=giphy.mp4&ct=g","mp4_size":"203309","width":"480"},"fixed_height_small":{"height":"100","mp4":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/100.mp4?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=100.mp4&ct=g","mp4_size":"23661","size":"180800","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/100.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=100.gif&ct=g","webp":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/100.webp?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=100.webp&ct=g","webp_size":"86126","width":"178"},"fixed_height":{"height":"200","mp4":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/200.mp4?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=200.mp4&ct=g","mp4_size":"84361","size":"593884","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/200.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=200.gif&ct=g","webp":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/200.webp?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=200.webp&ct=g","webp_size":"235452","width":"356"},"downsized_small":{"height":"146","mp4":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy-downsized-small.mp4?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=giphy-downsized-small.mp4&ct=g","mp4_size":"90440","width":"260"},"preview":{"height":"106","mp4":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy-preview.mp4?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=giphy-preview.mp4&ct=g","mp4_size":"13039","width":"188"},"fixed_width_downsampled":{"height":"112","size":"73463","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/200w_d.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=200w_d.gif&ct=g","webp":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/200w_d.webp?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=200w_d.webp&ct=g","webp_size":"51560","width":"200"},"fixed_width_small_still":{"height":"56","size":"4414","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/100w_s.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=100w_s.gif&ct=g","width":"100"},"fixed_width_small":{"height":"56","mp4":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/100w.mp4?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=100w.mp4&ct=g","mp4_size":"9763","size":"60348","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/100w.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=100w.gif&ct=g","webp":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/100w.webp?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=100w.webp&ct=g","webp_size":"37102","width":"100"},"original_still":{"height":"146","size":"22546","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy_s.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=giphy_s.gif&ct=g","width":"260"},"fixed_width_still":{"height":"112","size":"14499","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/200w_s.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=200w_s.gif&ct=g","width":"200"},"looping":{"mp4":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy-loop.mp4?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=giphy-loop.mp4&ct=g","mp4_size":"2240437"},"fixed_width":{"height":"112","mp4":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/200w.mp4?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=200w.mp4&ct=g","mp4_size":"25296","size":"222766","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/200w.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=200w.gif&ct=g","webp":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/200w.webp?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=200w.webp&ct=g","webp_size":"101322","width":"200"},"preview_gif":{"height":"54","size":"49849","url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy-preview.gif?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=giphy-preview.gif&ct=g","width":"96"},"480w_still":{"url":"https:\/\/media3.giphy.com\/media\/BfrOzZpsjfuiQ\/480w_s.jpg?cid=b8618f67c366a41596f56f300f7824f0749fc5e92d2c87ee&rid=480w_s.jpg&ct=g","width":"480","height":"270"}},"image_original_url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy.gif","image_url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy.gif","image_mp4_url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/giphy.mp4","image_frames":"19","image_width":"260","image_height":"146","fixed_height_downsampled_url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/200_d.gif","fixed_height_downsampled_width":"356","fixed_height_downsampled_height":"200","fixed_width_downsampled_url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/200w_d.gif","fixed_width_downsampled_width":"200","fixed_width_downsampled_height":"112","fixed_height_small_url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/100.gif","fixed_height_small_still_url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/100_s.gif","fixed_height_small_width":"178","fixed_height_small_height":"100","fixed_width_small_url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/100w.gif","fixed_width_small_still_url":"https:\/\/media4.giphy.com\/media\/BfrOzZpsjfuiQ\/100w_s.gif","fixed_width_small_width":"100","fixed_width_small_height":"56","caption":""},"meta":{"status":200,"msg":"OK","response_id":"c366a41596f56f300f7824f0749fc5e92d2c87ee"},"tag":"rich"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /currencies
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = main.controller.DefaultController
+           Method = main.controller.DefaultController#getCurrencies()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = ["AED","AFN","ALL","AMD","ANG","AOA","ARS","AUD","AWG","AZN","BAM","BBD","BDT","BGN","BHD","BIF","BMD","BND","BOB","BRL","BSD","BTC","BTN","BWP","BYN","BZD","CAD","CDF","CHF","CLF","CLP","CNH","CNY","COP","CRC","CUC","CUP","CVE","CZK","DJF","DKK","DOP","DZD","EGP","ERN","ETB","EUR","FJD","FKP","GBP","GEL","GGP","GHS","GIP","GMD","GNF","GTQ","GYD","HKD","HNL","HRK","HTG","HUF","IDR","ILS","IMP","INR","IQD","IRR","ISK","JEP","JMD","JOD","JPY","KES","KGS","KHR","KMF","KPW","KRW","KWD","KYD","KZT","LAK","LBP","LKR","LRD","LSL","LYD","MAD","MDL","MGA","MKD","MMK","MNT","MOP","MRO","MRU","MUR","MVR","MWK","MXN","MYR","MZN","NAD","NGN","NIO","NOK","NPR","NZD","OMR","PAB","PEN","PGK","PHP","PKR","PLN","PYG","QAR","RON","RSD","RUB","RWF","SAR","SBD","SCR","SDG","SEK","SGD","SHP","SLL","SOS","SRD","SSP","STD","STN","SVC","SYP","SZL","THB","TJS","TMT","TND","TOP","TRY","TTD","TWD","TZS","UAH","UGX","USD","UYU","UZS","VES","VND","VUV","WST","XAF","XAG","XAU","XCD","XDR","XOF","XPD","XPF","XPT","YER","ZAR","ZMW","ZWL"]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /gif
+       Parameters = {code=[FAKE]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = main.controller.DefaultController
+           Method = main.controller.DefaultController#getGif(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[java.lang.NullPointerException: Cannot invoke "java.lang.Double.doubleValue()" because "rateByCode" is null
+	at main.service.CurrencyService.getTheCurrentRateInBaseCurrency(CurrencyService.java:91)
+	at main.service.CurrencyService.getTagKey(CurrencyService.java:51)
+	at main.controller.DefaultController.getGif(DefaultController.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:167)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:134)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:183)
+	at main.ControllerTest.getException(ControllerTest.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:135)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+]]></system-err>
+</testsuite>
