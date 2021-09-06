@@ -6,4 +6,4 @@ RUN mkdir ./app
 
 COPY ./CurrencyInformant-1.0-SNAPSHOT.jar ./app
 
-CMD java -jar ./CurrencyInformant-1.0-SNAPSHOT.jar
+CMD java -jar ./app/CurrencyInformant-1.0-SNAPSHOT.jar
