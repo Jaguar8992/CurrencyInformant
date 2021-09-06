@@ -17,7 +17,7 @@
 
 Для создания Docker контейнера перейдите в директорию где лежит Dockerfile и выполните команду:
 
-    docker build -t currency_informant
+    docker build -t currency_informant .
 
 Далее запустите его командой:
     
