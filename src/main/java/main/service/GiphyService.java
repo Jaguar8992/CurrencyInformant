@@ -40,7 +40,8 @@ public class GiphyService {
         try {
             gifData = giphyClient.getGif(apiKey, tag);
         }  catch (FeignException ex){
-            return ResponseEntity.badRequest().body(ex);
+            ex.printStackTrace();
+            return ResponseEntity.badRequest().body(null);
         }
         int index = gifData.lastIndexOf("}");
         /**

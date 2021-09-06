@@ -79,8 +79,8 @@ public class ServicesTest {
     }
 
     @Test
-    @DisplayName("Compare current and previous")
-    public void compare(){
+    @DisplayName("The value of the current one is greater")
+    public void currentIsGreater(){
         Mockito.when(currencyClient.getCurrent(anyString()))
                 .thenReturn(this.current);
         Mockito.when(currencyClient.getHistorical(anyString(), anyString()))

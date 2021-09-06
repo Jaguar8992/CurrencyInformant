@@ -5,12 +5,21 @@ plugins {
     id 'application'
 }
 
-group 'org.example'
+group 'CurrencyInformant'
 version '1.0-SNAPSHOT'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
+}
+
+task copyJarToRootDirectory {
+    doLast {
+        copy {
+            from './build/libs/CurrencyInformant-1.0-SNAPSHOT.jar'
+            into "./"
+        }
+    }
 }
 
 repositories {

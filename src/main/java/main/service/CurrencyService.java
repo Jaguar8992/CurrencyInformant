@@ -6,13 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Set;
 
 @Service
 public class CurrencyService {
@@ -53,7 +51,8 @@ public class CurrencyService {
             currentRate = getTheCurrentRateInBaseCurrency(base, currencyCode, current);
             prevRate = getPrevRate(current.getTimestamp() * 1000, currentRate, currencyCode);
         } catch (NullPointerException ex){
-            return ResponseEntity.badRequest().body(ex);
+            ex.printStackTrace();
+            return ResponseEntity.badRequest().body(null);
         }
         return ResponseEntity.ok(currentRate.compareTo(prevRate));
     }
@@ -78,7 +77,6 @@ public class CurrencyService {
         }
         return prevRate;
     }
-
     /**
      * Получение значения курса валюты указанной пользователем в отношении базовой валюты
      * @param base Базовая валюта - указывается в настройках
